@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYL-YX-ogn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Converter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConverterController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-3w-XnO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="110"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COt-Rm-BVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spi-wh-6cQ">
+                                                <rect key="frame" x="10" y="8" width="287" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="amQ-RI-kyf"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="testField1DidEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="Jma-1M-kBO"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3md-zg-tDk">
+                                                <rect key="frame" x="307" y="0.0" width="100" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="B0J-Lt-4v0"/>
+                                                    <constraint firstAttribute="width" constant="100" id="NSJ-Nq-lzF"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" title="Currency">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Back:" destination="f5y-yP-SJy" eventType="touchUpInside" id="PeL-BJ-Tq1"/>
+                                                    <action selector="goBack:" destination="f5y-yP-SJy" eventType="touchUpInside" id="aMh-OW-eAi"/>
+                                                    <segue destination="7dZ-8u-gb6" kind="show" identifier="segue1" id="Mk1-Ls-spr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3md-zg-tDk" firstAttribute="leading" secondItem="Spi-wh-6cQ" secondAttribute="trailing" constant="10" id="2Ec-GB-abv"/>
+                                            <constraint firstItem="3md-zg-tDk" firstAttribute="top" secondItem="COt-Rm-BVu" secondAttribute="top" id="5d7-p1-B0e"/>
+                                            <constraint firstItem="Spi-wh-6cQ" firstAttribute="leading" secondItem="COt-Rm-BVu" secondAttribute="leading" constant="10" id="Z5F-cd-HdT"/>
+                                            <constraint firstAttribute="bottom" secondItem="3md-zg-tDk" secondAttribute="bottom" id="ZjP-Bo-1lc"/>
+                                            <constraint firstAttribute="trailing" secondItem="3md-zg-tDk" secondAttribute="trailing" constant="7" id="cJy-PO-0Cg"/>
+                                            <constraint firstItem="Spi-wh-6cQ" firstAttribute="centerY" secondItem="COt-Rm-BVu" secondAttribute="centerY" id="oBf-vF-1Qt"/>
+                                            <constraint firstItem="3md-zg-tDk" firstAttribute="centerY" secondItem="COt-Rm-BVu" secondAttribute="centerY" id="t2u-RZ-Gxe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-G7-i3L">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKy-J4-9m5">
+                                                <rect key="frame" x="10" y="8" width="287" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Scc-wq-YUc"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="testField2DidEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="5xE-sv-wEF"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n43-hL-zyf">
+                                                <rect key="frame" x="307" y="0.0" width="100" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="6wN-z8-mXw"/>
+                                                    <constraint firstAttribute="height" constant="50" id="IwR-Yk-BVl"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" title="Currency">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Back:" destination="f5y-yP-SJy" eventType="touchUpInside" id="VZ2-ti-cdP"/>
+                                                    <action selector="goBack:" destination="f5y-yP-SJy" eventType="touchUpInside" id="IAe-sv-eGu"/>
+                                                    <segue destination="7dZ-8u-gb6" kind="show" identifier="segue2" id="dp0-u8-6jd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="n43-hL-zyf" firstAttribute="centerY" secondItem="RVK-G7-i3L" secondAttribute="centerY" id="Fgg-ZR-HjF"/>
+                                            <constraint firstAttribute="trailing" secondItem="n43-hL-zyf" secondAttribute="trailing" constant="7" id="YTO-UY-fpI"/>
+                                            <constraint firstItem="rKy-J4-9m5" firstAttribute="centerY" secondItem="RVK-G7-i3L" secondAttribute="centerY" id="ax0-Y8-ZAs"/>
+                                            <constraint firstAttribute="bottom" secondItem="n43-hL-zyf" secondAttribute="bottom" id="b4U-AD-5Td"/>
+                                            <constraint firstItem="n43-hL-zyf" firstAttribute="leading" secondItem="rKy-J4-9m5" secondAttribute="trailing" constant="10" id="b63-AM-lf6"/>
+                                            <constraint firstItem="n43-hL-zyf" firstAttribute="top" secondItem="RVK-G7-i3L" secondAttribute="top" id="h4y-F3-3zw"/>
+                                            <constraint firstItem="rKy-J4-9m5" firstAttribute="leading" secondItem="RVK-G7-i3L" secondAttribute="leading" constant="10" id="t7m-we-gJN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tzg-3w-XnO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Kt-AB-2yd"/>
+                            <constraint firstItem="tzg-3w-XnO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1zf-GU-8nC"/>
+                            <constraint firstItem="tzg-3w-XnO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fbc-bY-MVT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Converter" id="orc-nx-sxe"/>
+                    <connections>
+                        <outlet property="Button1" destination="3md-zg-tDk" id="GEE-aS-Zff"/>
+                        <outlet property="Button2" destination="n43-hL-zyf" id="cvO-Oj-STQ"/>
+                        <outlet property="textField1" destination="Spi-wh-6cQ" id="KnF-qu-iyP"/>
+                        <outlet property="textField2" destination="rKy-J4-9m5" id="RuK-TI-eKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="62.946428571428569"/>
+        </scene>
+        <!--Currency-->
+        <scene sceneID="jdP-U8-wuE">
+            <objects>
+                <viewController storyboardIdentifier="SecondScreen" id="7dZ-8u-gb6" customClass="CurrencyController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5y-yP-SJy" customClass="SecondController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n2J-vG-ae2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BB3-G7-3oy"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n2J-vG-ae2" firstAttribute="top" secondItem="BB3-G7-3oy" secondAttribute="top" id="8EO-n9-IyE"/>
+                            <constraint firstItem="BB3-G7-3oy" firstAttribute="bottom" secondItem="n2J-vG-ae2" secondAttribute="bottom" id="Lq5-Sg-Zfm"/>
+                            <constraint firstItem="n2J-vG-ae2" firstAttribute="trailing" secondItem="BB3-G7-3oy" secondAttribute="trailing" id="a6s-gH-DYG"/>
+                            <constraint firstItem="n2J-vG-ae2" firstAttribute="leading" secondItem="BB3-G7-3oy" secondAttribute="leading" id="zwJ-Gc-Jap"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency" id="D84-as-w0V">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ed3-sg-Zz3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="n2J-vG-ae2" id="38Z-21-ny1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9A-N4-O1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650.7246376811595" y="62.946428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RZ5-gg-OFw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NYL-YX-ogn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dji-vT-Rxs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TAs-2I-AcN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svx-vc-INs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dp0-u8-6jd"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
